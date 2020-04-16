@@ -1,0 +1,651 @@
+@charset "utf-8";
+/* Простой «резиновый» носитель
+   Примечание. Для «резинового» носителя требуется удалить атрибуты высоты и ширины из HTML
+   http://www.alistapart.com/articles/fluid-images/ 
+*/
+img, object, embed, video {
+	max-width: 100%;
+}
+/* IE6 не поддерживает атрибут max-width, поэтому по умолчанию используется ширина 100 % */
+.ie6 img {
+	width:100%;
+}
+
+/*
+	Свойства Dreamweaver Fluid Grid
+	----------------------------------
+	dw-num-cols-mobile:		2;
+	dw-num-cols-tablet:		2;
+	dw-num-cols-desktop:	2;
+	dw-gutter-percentage:	25;
+	
+	Вдохновлено книгой «Отзывчивый веб-дизайн» (Responsive Web Design) Итана Маркота (Ethan Marcote) 
+	http://www.alistapart.com/articles/responsive-web-design
+	
+	и системой Golden Grid Джони Корпи (Joni Korpi)
+	http://goldengridsystem.com/
+*/
+
+/* Мобильный макет: 480 пикс. и меньше. */
+
+.gridContainer {
+	width: 100%;
+	float: left;
+	background: #222;
+}
+.wrapper{
+	width: 100%;
+	position: relative;
+    display: block;
+	margin: 0 auto;
+}
+.ico-box{
+	width: 100%;
+	text-align: center;
+	box-shadow: 0 2px 3px rgba(0, 0, 0, .7);
+}
+.slider{
+	display: none;
+}
+.menu{
+	padding: 0;
+	margin: 0;
+	display: none;
+}
+.line-text{
+	width: 80%;
+	margin: 0 auto;
+	text-align: center;
+	font: 14px/20px arial,sans-serif;
+	color: #fff;
+	padding: 10px 0;
+}
+#features{
+	background: url(../images/wp.jpg);
+}
+.bookmark{
+	width: 90%;
+	margin: 10px auto;
+	padding: 10px 0;
+	background: #fff;
+	box-shadow: 0 1px 2px 1px rgba(0, 0, 0, .4);
+}
+.bookmark h4{
+    margin-top: 13px;
+    text-align: center;
+    color: #000;
+    font-weight: 700;
+    font-size: 20px;
+	width: 90%;
+	margin: 10px auto;
+}
+.bookmark p{
+	width: 90%;
+    margin: 13px auto;
+    text-align: justify;
+    color: #394753;
+    font-weight: 300;
+    font-size: 14px;
+}
+.bookmark-box-icon{
+	width: 100%;
+    height: 46px;
+	text-align: center;
+}
+.content-article{
+	width: 90%;
+	margin: 50px auto;
+}
+.content-l h3{
+	width: 100%;
+	color: #fff;
+	margin: 10px 0;
+	font: 20px/30px arial,sans-serif;
+}
+.content-l p{
+	width: 100%;
+	color: #fff;
+	margin: 10px 0;
+	text-align: justify;
+	font: 14px/24px arial,sans-serif;
+}
+.content-l ul{
+	color: #fff;
+	font: 14px/16px arial,sans-serif;
+}
+#footer{
+	background: #000;
+	color: #fff;
+}
+.footer-margin-left{
+	width: 100%;
+	margin: 20px 0;
+	text-align: center;
+}
+.footer-btn{
+	width: 100%;
+	height: 35px;
+}
+.footer-btn span{
+	width: 35px;
+	height: 35px;
+	margin: 0 5px;
+	display: inline-block;
+}
+.menu-mob-btn{
+	width: 90%;
+	margin: 10px auto;
+	height: 30px;
+	background: #fff;
+	text-align: center;
+	font: bold 14px/30px arial,sans-serif;
+	box-shadow: 0 1px 2px 1px rgba(0, 0, 0, .9);
+}
+.menu-mob{
+	display: none;
+	width: 90%;
+	margin: 0 auto;
+	padding: 0;
+	border-bottom: 1px solid #fff;
+}
+.menu-mob a{
+	text-decoration: none;
+	color: #fff;
+}
+.menu-mob li{
+	width: 100%;
+	text-align: center;
+	display: block;
+	font: 14px/26px arial,sans-serif;
+}
+.responsivemenu{
+	display: block;
+}
+.bookmark-reg{
+	width: 80%;
+	padding: 15px;
+	margin: 10px auto;
+	background: #fff;
+	box-shadow: 0 1px 2px 1px rgba(0, 0, 0, .4);
+}
+.bookmark-reg h4{
+	margin: 0;
+	font: 20px/20px arial,sans-serif;
+}
+.bookmark-reg-blox p{
+	width: 100%;
+	margin: 15px 0 5px 0;
+	padding: 0;
+	font: 12px/20px arial,sans-serif;
+}
+.bookmark-reg-blox input{
+	width: 100%;
+    outline: none;
+    border: 1px solid #222;
+    padding: 5px 0;
+}
+.bookmark-reg-blox textarea{
+	width: 100%;
+	height: 115px;
+	padding: 0;
+    outline: none;
+    border: 1px solid rgb(0, 0, 0);
+}
+.bookmark-reg-blox select{
+	width: 100%;
+    border: 1px solid rgb(0, 0, 0);
+    outline: none;
+    padding: 5px 0;
+}
+.bookmark-reg-blox button{
+	width: 100%;
+	height: 30px;
+	background: #222;
+	color: #fff;
+    outline: none;
+    border-radius: 4px;
+	border: 0;
+}
+.reviews-block{
+	width: 90%;
+	margin: 0 auto;
+}
+.reviews-one{
+	width: 100%;
+	margin: 10px 0;
+	padding: 5px 0;
+	background: #fff;
+	box-shadow: 0 1px 2px 1px rgba(0, 0, 0, .9);
+	border-radius: 4px;
+}
+.reviews-one p{
+	width: 96%;
+	padding: 0 2%;
+	margin: 5px 0;
+	font: bold 12px/14px arial,sans-serif;
+	text-overflow: ellipsis;
+    overflow: hidden;
+	color: #000;
+}
+.reviews-one div{
+	width: 96%;
+	padding: 0 2%;
+	margin: 10px 0;
+	font: 12px/14px arial,sans-serif;
+	text-overflow: ellipsis;
+    overflow: hidden;
+	color: #000;
+}
+#map{
+	width: 100%; 
+	height: 440px
+}
+.error{
+	color: rgb(255, 0, 0);
+	font-size: 12px;
+	margin-top: -5px;
+	-webkit-transition: 4s ease-out;
+	-o-transition: 4s ease-out;
+	-moz-transition: 4s ease-out;
+	transition: 4s ease-out;
+}
+.icons{
+	display: none;
+}
+.news{
+	color: #fff;
+	text-align: center;
+	margin-bottom: 10px;
+	font: italic 12px/14px arial,sans-serif;
+}
+.answer-suc{
+	width: 100%;
+	height: 300px;
+	display: none;
+	text-align: center;
+}
+.answer-suc img{
+	margin-top: 70px;
+}
+.answer-suc_div{
+	margin-top: 30px;
+}
+.call-number{
+	display: none;
+}
+/* Макет для планшета: 481–768 пикс. Наследует стили от мобильного макета. */
+
+@media only screen and (min-width: 481px) {
+.gridContainer {
+	width: 100%;
+}
+}
+
+/* Макет для настольного компьютера: 769–1232 пикс. (максимум). Наследует стили от мобильного макета и макета для планшета. */
+
+@media only screen and (min-width: 769px) {
+.gridContainer {
+	width: 100%;
+	min-width: 1000px;
+	margin: 0 auto;
+}
+.wrapper{
+	width: 1000px;
+	margin: 0 auto;
+}
+.ico-box{
+	width: 300px;
+	height: 100px;
+	background: url(../images/logo.png);
+	background-color: #222;
+	top: 20px;
+	position: absolute;
+}
+.menu{
+	width: 680px;
+	margin: 30px 0;
+	font: 14px/16px arial,sans-serif;
+	float: right;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.menu a{
+	text-decoration: none;
+	color: #fff;
+}
+.menu li{
+	display: block;
+}
+.menu-mob{
+	display: none;
+}
+.menu-mob-btn{
+	display: none;
+}
+.slider{
+	width: 100%;
+	height: 360px;
+	display: block;
+	background: #fff;
+	float: left;
+}
+.slide-center{
+	width: 1000px;
+	height: 360px;
+	margin: 0 auto;
+	position: relative;
+	background: #fff;
+}
+.slide-center img{
+	float: right;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+}
+.slide-center-text{
+	width: 400px;
+	position: absolute;
+	margin-top: 60px;
+}
+.slide-center-text p{
+	width: 400px;
+	color: #000;
+	font: 14px/16px arial,sans-serif;
+}
+.slide-center-text h1{
+	width: 400px;
+	z-index: 65;
+	float: left;
+	color: #000;
+	font: 24px/26px arial,sans-serif;
+}
+.line-text{
+	font: 20px/30px arial,sans-serif;
+	padding: 10px 0;
+}
+.books{
+	margin: -30px auto;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+#features {
+    width: 100%;
+	box-shadow: inset 0 4px 25px rgba(0, 0, 0, .9);
+	background-repeat: repeat;
+    background-position: center;
+}
+.footer-btn{
+	width: 90px;
+	height: 35px;
+	float: right;
+}
+.footer-btn span{
+	width: 35px;
+	height: 35px;
+	display: block;
+	margin: 0 5px;
+	float: right;
+}
+.footer-margin-left{
+	height: 40px;
+}
+.footer-margin-left p{
+	float: left;
+}
+.bookmark{
+	width: 210px;
+	height: 320px;
+	padding: 30px 15px;
+	background: #fff;
+	float: left;
+}
+.bookmark h4{    
+	width: 100%;
+}
+.bookmark p{
+	width: 100%;
+}
+.bookmark-box-icon{
+	width: 100%;
+    height: 46px;
+	text-align: center;
+}
+.bookmark-reg{
+	width: auto;
+	margin: 0 auto;
+	background: #fff;
+	box-shadow: 0 1px 2px 1px rgba(0, 0, 0, .4);
+}
+.bookmark-reg-blox{
+	width: 270px;
+	padding: 15px;
+	overflow: hidden;
+	float: left;
+}
+.bookmark-reg-blox input{
+	width: 250px;
+    border-radius: 4px;
+    padding: 5px;
+}
+.bookmark-reg-blox select{
+	width: 260px;
+    border-radius: 4px;
+    padding: 5px;
+}
+.bookmark-reg-blox textarea{
+	width: 255px;
+	height: 115px;
+	padding: 2px;
+    border-radius: 4px;
+    border: 1px solid rgb(0, 0, 0);
+}
+.bookmark-reg-blox button{
+	width: 120px;
+}
+.content-l{
+	width: 100%;
+}
+.content-article{
+	width: 100%;
+	margin: 50px 0;
+}
+.content-l h3{
+	width: 100%;
+	color: #fff;
+	margin: 10px 0;
+	font: 20px/30px arial,sans-serif;
+}
+.content-l p{
+	width: 100%;
+	color: #fff;
+	margin: 10px 0;
+	text-align: justify;
+	font: 14px/24px arial,sans-serif;
+}
+.content-l ul{
+	color: #fff;
+	font: 14px/16px arial,sans-serif;
+}
+.reviews-block{
+	width: 500px;
+	float: left;
+}
+.reviews-one{
+	width: 400px;
+	padding: 20px;
+	margin: 10px 30px;
+	background: #fff;
+	box-shadow: 0 1px 2px 1px rgba(0, 0, 0, .9);
+	border-radius: 4px;
+}
+.reviews-one p{
+	width: 400px;
+	margin: 0;
+	font: bold 12px/14px arial,sans-serif;
+	color: #000;
+}
+.reviews-one div{
+	width: 400px;
+	margin: 10px 0;
+	font: 12px/14px arial,sans-serif;
+	color: #000;
+}
+.block-map{
+	width: 600px;
+	margin-top: 40px;
+    position: absolute;
+    display: block;
+    right: 0;
+    top: 0;
+}
+#map{
+	width:600px; 
+	height:440px
+}
+.error{
+	font-size: 12px;
+	margin: -15px 0 0 0;
+}
+.icons{
+	width: 1000px;
+	height: 60px;
+	margin: 0 0 50px 0;
+	display: block;
+	background: url(../images/icons.png);
+}
+.answer-suc{
+	width: 600px;
+	height: 300px;
+}
+/*111111111111111111111111111111111111111111111111111111111111111111111*/
+.center-admin{
+    width: 1100px;
+    margin: 0 auto;
+}
+.admin{
+    float: left;
+}
+.admin-head{
+    width: 1100px;
+    font-family: "Roboto Slab", sans-serif;
+    font-weight: bold;
+    font-size: 34px;
+    text-align: left;
+    color: #222;
+	margin: 20px 10px;
+    float: left;
+}
+.client-line, .client-line-f{
+    float: left;
+    width: 1100px;
+    position: relative;
+    margin-top: 10px;
+    padding: 10px 0;
+}
+.client-line div, .client-line-f div{
+    float: left;
+    font-family: "Roboto Slab", sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    height: 100%;
+    position: relative;
+    text-align: left;
+    display: table;
+}
+.client-line-f{
+    background: #222;
+    color: #fff;
+}
+.bc{
+    background: rgb(104, 104, 104);
+    color: rgb(255, 255, 255);
+}
+.client-id{
+	width: 50px;
+	margin-left: 10px;
+}
+.client-name{
+	width: 140px;
+	padding: 0 4px;
+}
+.client-email{   
+    width: 150px;
+	padding: 0 4px;
+}
+.client-phone{
+    width: 130px;
+	padding: 0 4px;
+}
+.client-text{
+	width: 200px;
+	padding: 0 4px;
+}
+.client-date{
+    width: 160px;
+	padding: 0 4px;
+}
+.cdate-input{
+    width: 130px;
+	padding: 0 5px;
+    border-radius: 4px;
+    border: 0;
+	outline: none;
+	background: #e0e0e0;
+}
+.client-time{
+    width: 200px;
+	padding: 0 4px;
+}
+.ctime-input{
+    width: 70px;
+	border-radius: 4px;
+	margin-top: 5px;
+    border: 0;
+	background: #e0e0e0;
+    outline: none;
+}
+.admin-btn{
+    float: right;
+    background: #222;
+    color: #fff;
+    border-radius: 10px;
+    padding: 5px 10px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.btn-ok{
+    width: 20px;
+    height: 20px;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    position: absolute;
+}
+.btn-del{
+    width: 20px;
+    height: 20px;
+    top: 30px;
+    right: 0;
+    cursor: pointer;
+    position: absolute;
+}
+.one-line{
+	width: 1000px;
+	float: left;
+}
+.call-number{
+	width: 220px;
+	height: 64px;
+	padding: 5px 10px;
+	background: #222;
+	box-shadow: 0 2px 3px rgba(0, 0, 0, .7);
+	position: absolute;
+	right: 0;
+	top: 55px;
+	display: block;
+	font: 12px/16px "Roboto Slab", sans-serif;
+	color: #fff;
+}
+}
